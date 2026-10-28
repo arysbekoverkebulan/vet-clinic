@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Paw &amp; Care logo">
+  <rect width="64" height="64" rx="18" fill="#0b6a60"/>
+  <g fill="#ffffff">
+    <ellipse cx="32" cy="42" rx="12" ry="9.5"/>
+    <ellipse cx="17" cy="30" rx="5.2" ry="6.6" transform="rotate(-20 17 30)"/>
+    <ellipse cx="27" cy="20" rx="5" ry="6.8"/>
+    <ellipse cx="37" cy="20" rx="5" ry="6.8"/>
+    <ellipse cx="47" cy="30" rx="5.2" ry="6.6" transform="rotate(20 47 30)"/>
+  </g>
+  <path d="M32 36v12M26 42h12" stroke="#0b6a60" stroke-width="3.4" stroke-linecap="round"/>
+</svg>
