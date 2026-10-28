@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paw &amp; Care — Veterinary Clinic</title>
+  <meta name="description" content="Paw &amp; Care Veterinary Clinic: therapy, surgery and vaccination for your pets, experienced doctors and online appointment booking.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <!-- Switches (CSS-only, no JavaScript) -->
+  <input type="checkbox" id="theme-toggle" class="visually-hidden" aria-label="Night mode (high contrast)">
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- 1. Header / Nav component -->
+  <header class="site-header">
+    <input type="checkbox" id="nav-toggle" class="visually-hidden" aria-label="Open menu">
+    <a class="brand" href="#top">
+      <img src="images/logo.svg" alt="" width="40" height="40">
+      <span>Paw &amp; Care</span>
+    </a>
+    <label class="burger" for="nav-toggle" aria-hidden="true">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </label>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#staff">Staff</a></li>
+        <li><a href="#appointment">Appointment</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </ul>
+      <a class="btn btn-call" href="tel:+77000000000">Call Doctor 24/7</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 2. Hero section component -->
+    <section class="hero" aria-labelledby="hero-title">
+      <figure class="hero-media">
+        <picture>
+          <source srcset="images/hero.webp" type="image/webp">
+          <img src="images/hero.svg" alt="A veterinarian listens to a dog's heartbeat with a stethoscope" width="1600" height="900">
+        </picture>
+      </figure>
+      <article class="hero-content">
+        <p class="eyebrow">Veterinary clinic · open every day</p>
+        <h1 id="hero-title">Professional Care for Your Pets</h1>
+        <p class="lead">Experienced doctors, modern diagnostics and gentle care for dogs, cats and exotic pets. Emergency help is available around the clock.</p>
+        <a class="btn btn-cta" href="#appointment">Make an Appointment</a>
+      </article>
+    </section>
+
+    <!-- 3. Grid section component -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <header class="section-head">
+        <h2 id="services-title">Our Services</h2>
+        <p>Three main directions that cover everything your pet needs from a check-up to an operation.</p>
+      </header>
+      <ul class="grid">
+        <li class="grid-item">
+          <article class="card">
+            <img src="images/icon-therapy.svg" alt="" width="64" height="64">
+            <h3>Therapy</h3>
+            <p>Examinations, diagnostics, laboratory tests and treatment plans for everyday illnesses.</p>
+          </article>
+        </li>
+        <li class="grid-item">
+          <article class="card">
+            <img src="images/icon-surgery.svg" alt="" width="64" height="64">
+            <h3>Surgery</h3>
+            <p>Planned and emergency operations with modern anesthesia and careful recovery.</p>
+          </article>
+        </li>
+        <li class="grid-item">
+          <article class="card">
+            <img src="images/icon-vaccination.svg" alt="" width="64" height="64">
+            <h3>Vaccination</h3>
+            <p>Age-appropriate vaccines, deworming and a vaccination passport for your pet.</p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section section-alt" id="staff" aria-labelledby="staff-title">
+      <header class="section-head">
+        <h2 id="staff-title">Our Staff</h2>
+        <p>Licensed veterinarians who continue to study and to take part in professional conferences.</p>
+      </header>
+      <ul class="grid">
+        <li class="grid-item">
+          <article class="card card-staff">
+            <span class="avatar" aria-hidden="true">AN</span>
+            <h3>Dr. Aigerim Nurova</h3>
+            <p class="role">Head physician, therapist</p>
+            <p>12 years of practice, internal medicine and ultrasound diagnostics.</p>
+          </article>
+        </li>
+        <li class="grid-item">
+          <article class="card card-staff">
+            <span class="avatar" aria-hidden="true">TB</span>
+            <h3>Dr. Timur Bekov</h3>
+            <p class="role">Surgeon</p>
+            <p>9 years of practice, soft-tissue and orthopedic surgery.</p>
+          </article>
+        </li>
+        <li class="grid-item">
+          <article class="card card-staff">
+            <span class="avatar" aria-hidden="true">DS</span>
+            <h3>Dr. Dana Sadykova</h3>
+            <p class="role">Vaccination and prevention</p>
+            <p>7 years of practice, vaccination schedules and puppy and kitten care.</p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 4. Feedback form component -->
+    <section class="section section-form" id="appointment" aria-labelledby="appointment-title">
+      <header class="section-head form-intro">
+        <h2 id="appointment-title">Book an Appointment</h2>
+        <p>Fill in the form and our administrator will call you back to confirm the time of the visit.</p>
+      </header>
+      <form class="form" action="#appointment" method="get">
+        <label class="field">
+          <span class="field-label">Pet's Name</span>
+          <input type="text" name="pet_name" placeholder="For example, Rex" required minlength="2" maxlength="40" autocomplete="off">
+        </label>
+        <label class="field">
+          <span class="field-label">Pet Species</span>
+          <input type="text" name="pet_species" list="species-list" placeholder="Dog, cat, rabbit..." required minlength="3" maxlength="30" autocomplete="off">
+          <datalist id="species-list">
+            <option value="Dog">
+            <option value="Cat">
+            <option value="Rabbit">
+            <option value="Hamster">
+            <option value="Bird">
+          </datalist>
+        </label>
+        <label class="field">
+          <span class="field-label">Owner's Phone</span>
+          <input type="tel" name="owner_phone" placeholder="+7 700 000 00 00" required pattern="\+?[0-9 ]{10,16}" inputmode="tel" autocomplete="tel">
+        </label>
+        <label class="field">
+          <span class="field-label">Owner's Email</span>
+          <input type="email" name="owner_email" placeholder="name@example.com" required autocomplete="email">
+        </label>
+        <label class="field">
+          <span class="field-label">Date of the Visit</span>
+          <input type="date" name="visit_date" required>
+        </label>
+        <label class="field">
+          <span class="field-label">Reason for the Visit (optional)</span>
+          <textarea name="reason" rows="3" maxlength="300" placeholder="Short description"></textarea>
+        </label>
+        <label class="consent">
+          <input type="checkbox" name="consent" required>
+          <span>I agree to be contacted about my appointment.</span>
+        </label>
+        <button class="btn btn-cta" type="submit">Send Request</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- 5. Footer component -->
+  <footer class="site-footer" id="contacts">
+    <section class="footer-block footer-contact" aria-labelledby="emergency-title">
+      <h2 class="footer-title" id="emergency-title">Emergency 24/7</h2>
+      <a class="emergency" href="tel:+77000000000">+7 (700) 000-00-00</a>
+      <address>
+        <p>Almaty, Abay Ave. 10</p>
+        <p>Reception: daily, 08:00 to 22:00</p>
+      </address>
+    </section>
+    <nav class="footer-block" aria-label="Footer navigation">
+      <h2 class="footer-title">Navigation</h2>
+      <ul class="footer-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#staff">Staff</a></li>
+        <li><a href="#appointment">Appointment</a></li>
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </nav>
+    <section class="footer-block" aria-labelledby="messengers-title">
+      <h2 class="footer-title" id="messengers-title">Messengers</h2>
+      <ul class="footer-links">
+        <li><a href="https://wa.me/77000000000">WhatsApp</a></li>
+        <li><a href="https://t.me/example">Telegram</a></li>
+        <li><a href="https://instagram.com/example">Instagram</a></li>
+      </ul>
+    </section>
+    <section class="footer-block" aria-labelledby="legal-title">
+      <h2 class="footer-title" id="legal-title">Legal information</h2>
+      <p>Paw &amp; Care Veterinary Clinic LLP, license No. VET-0000, BIN 000000000000.</p>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </section>
+    <p class="copyright">&copy; 2026 Paw &amp; Care. All rights reserved.</p>
+    <label class="theme-switch" for="theme-toggle">
+      <span class="switch-track" aria-hidden="true"></span>
+      <span>Night mode (high contrast)</span>
+    </label>
+  </footer>
+
+  <!-- Thumb zone: the main action is always reachable by the thumb on a phone -->
+  <a class="btn btn-cta sticky-cta" href="#appointment">Make an Appointment</a>
+</body>
+</html>
