@@ -607,3 +607,143 @@ address {
     scroll-behavior: auto !important;
   }
 }
+
+/* ---------- 11. Desktop: single column becomes a multi-column layout ---------- */
+@media (min-width: 1024px) {
+  :root {
+    --margin: 4.5rem;
+    --gutter: 1.5rem;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+
+  .sticky-cta,
+  .burger {
+    display: none;
+  }
+
+  /* Header: horizontal flex container */
+  .site-nav {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  #nav-toggle:checked ~ .site-nav {
+    display: flex;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 0.25rem;
+    margin: 0;
+  }
+
+  .nav-list a {
+    padding: 0 1rem;
+  }
+
+  .site-nav .btn-call {
+    width: auto;
+  }
+
+  /* Hero */
+  .hero {
+    align-items: center;
+    min-height: 42rem;
+    padding: 2rem var(--pad);
+  }
+
+  .hero-media {
+    inset: 0;
+    height: auto;
+  }
+
+  .hero-media img {
+    object-position: center;
+  }
+
+  .hero-content {
+    max-width: 34rem;
+    padding: 2.5rem;
+  }
+
+  .hero .btn {
+    width: auto;
+  }
+
+  /* Grid: 12 columns, every card spans 4 */
+  .grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .grid-item {
+    grid-column: span 4;
+  }
+
+  /* Form: text on the left, form on the right */
+  .section-form {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--gutter);
+    align-items: start;
+  }
+
+  .section-form .section-head {
+    grid-column: span 5;
+  }
+
+  .form {
+    grid-column: span 7;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 2rem;
+  }
+
+  .field:nth-of-type(n + 5),
+  .consent,
+  .form .btn {
+    grid-column: span 2;
+  }
+
+  .field:nth-of-type(-n + 4) {
+    grid-column: span 1;
+  }
+
+  /* Footer: 12 columns */
+  .site-footer {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .footer-contact {
+    grid-column: span 4;
+  }
+
+  .footer-block:nth-child(2) {
+    grid-column: span 2;
+  }
+
+  .footer-block:nth-child(3) {
+    grid-column: span 3;
+  }
+
+  .footer-block:nth-child(4) {
+    grid-column: span 3;
+  }
+
+  .copyright {
+    grid-column: span 9;
+    align-self: center;
+  }
+
+  .theme-switch {
+    grid-column: span 3;
+    justify-self: end;
+  }
+}
